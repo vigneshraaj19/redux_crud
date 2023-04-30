@@ -56,7 +56,7 @@ export const getUserObj=(data)=>{
 export const FetchUserList=()=>{
     return (dispatch)=>{
         dispatch(makeRequest());
-            axios.get('http://localhost:9000/api/user').then(res=>{
+            axios.get('https://redux-node-crud.onrender.com/api/user').then(res=>{
                 const userlist=res.data;
                 dispatch(getUserList(userlist))
             }).catch(err=>{
@@ -68,7 +68,7 @@ export const FetchUserList=()=>{
 export const Removeuser=(code)=>{
     return (dispatch)=>{
         dispatch(makeRequest());     
-            axios.delete(`http://localhost:9000/api/delete/${code}`).then(res=>{
+            axios.delete(`https://redux-node-crud.onrender.com/api/delete/${code}`).then(res=>{
                 dispatch(DeleteUser())
                 toast.success("User Removed Successfully")
             }).catch(err=>{
@@ -80,7 +80,7 @@ export const Removeuser=(code)=>{
 export const FunctionAddUser=(data)=>{
     return (dispatch)=>{
         dispatch(makeRequest());      
-            axios.post('http://localhost:9000/api/user/add',data).then(res=>{
+            axios.post('https://redux-node-crud.onrender.com/api/user/add',data).then(res=>{
                 dispatch(AddUser())
                 toast.success("User Added Successfully")
             }).catch(err=>{
@@ -92,7 +92,7 @@ export const FunctionAddUser=(data)=>{
 export const FunctionUpdateUser=(data,code)=>{
     return (dispatch)=>{
       dispatch(makeRequest());
-        axios.put(`http://localhost:9000/api/update`,data).then(res=>{
+        axios.put(`https://redux-node-crud.onrender.com/api/update`,data).then(res=>{
             dispatch(UpdateUser());
           }).catch(err=>{
             dispatch(failRequest(err.message))
@@ -102,7 +102,7 @@ export const FunctionUpdateUser=(data,code)=>{
 export const FetchUserObj=(code)=>{
     return (dispatch)=>{
       dispatch(makeRequest());
-        axios.get(`http://localhost:9000/api/updatedata/${code}`).then(res=>{
+        axios.get(`https://redux-node-crud.onrender.com/api/updatedata/${code}`).then(res=>{
             const userlist=res.data;
             dispatch(getUserObj(userlist));
           }).catch(err=>{
