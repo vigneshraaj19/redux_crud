@@ -1,0 +1,25 @@
+{
+  "user": [
+    {
+      "id": 3,
+      "name": "VIGNESHRAAJ",
+      "email": "Vigneshraaj26@gmail.com",
+      "phone": "8248218821",
+      "role": "staff"
+    },
+    {
+      "id": 4,
+      "name": "AKSHARA ",
+      "email": "vigneshraaj19@gmail.com",
+      "phone": "25253235",
+      "role": "admin"
+    },
+    {
+      "name": "vicky",
+      "email": "vickystack@gmail.com",
+      "phone": "8248218821",
+      "role": "staff",
+      "id": 5
+    }
+  ]
+}
