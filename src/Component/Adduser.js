@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { FunctionAddUser } from "../Redux/Action";
+import { FetchUserList, FunctionAddUser } from "../Redux/Action";
 import { toast } from "react-toastify";
 
 const Adduser = () => {
@@ -17,6 +17,7 @@ const Adduser = () => {
         const userobj = { name, email, phone, role };
         dispatch(FunctionAddUser(userobj));
         navigate('/user');
+        dispatch(FetchUserList()) 
     }
 
     return (
